@@ -14,7 +14,7 @@ class Client extends EventsEmitter {
         if (intents instanceof Array && intents.length < 1 || intents == 0) global._Error("You must provide intents!")
 
         this.getToken = function (_) {
-            return _.Token ? _.cachedToken : null;
+            return _.Token ? _.Token : null;
         };
         /*this.prefix = prefix ? prefix : "#";*/ // Coming soon!
         this.intents = intents ? intents : [];
@@ -33,6 +33,7 @@ class Client extends EventsEmitter {
             }
         }).then(req => {
             if (req.status == 429) global.DiscordError("[429] couldn't login!")
+            else if (req.status != 200) global.DiscordError(`[${req.status}] Couldn't identify the issue!`)
             return req.json()
         })
             .then(res => {
