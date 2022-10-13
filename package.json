@@ -1,0 +1,25 @@
+{
+  "name": "dscbots.js",
+  "version": "10.0.3",
+  "description": "Make discord bots with this simple to use Package.",
+  "main": "lmao.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Discord",
+    "Bot",
+    "Discord.js"
+  ],
+  "author": "Scamlot (Scam Spy)",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "colors": "^1.4.0",
+    "mapih": "^1.1.2",
+    "node-fetch": "^2.6.6",
+    "os": "^0.1.2",
+    "ws": "^8.9.0"
+  },
+  "devDependencies": {}
+}
